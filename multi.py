@@ -103,7 +103,7 @@ class BanditProblem(object):
         # mean reward 
         self.meanReward=np.zeros(self.totalSteps+1)
        
-actionValues=np.array([1,4,0,5,6-1,9])
+actionValues=np.array([1,4,2,0,7,1,-1])
 
 # epsilon values to investigate the performance of the method
 epsilon1=0
