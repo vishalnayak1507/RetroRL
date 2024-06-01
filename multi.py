@@ -103,7 +103,7 @@ class BanditProblem(object):
         # mean reward 
         self.meanReward=np.zeros(self.totalSteps+1)
        
-actionValues=np.array([1,2,3,4,5,6,7,8,9,10])
+actionValues=np.array([1,4,0,5,6-1,9])
 
 # epsilon values to investigate the performance of the method
 epsilon1=0
@@ -130,14 +130,14 @@ Bandit4.playGame()
 epsilon4MeanReward=Bandit4.meanReward
 
 #plot the results
-# plt.plot(np.arange(totalSteps+1),epsilon1MeanReward,linewidth=2, color='r', label='epsilon =0')
-# plt.plot(np.arange(totalSteps+1),epsilon2MeanReward,linewidth=2, color='k', label='epsilon =0.1')
-# plt.plot(np.arange(totalSteps+1),epsilon3MeanReward,linewidth=2, color='m', label='epsilon =0.2')
-# plt.plot(np.arange(totalSteps+1),epsilon4MeanReward,linewidth=2, color='b', label='epsilon =0.3')
-# plt.xscale("log")
-# plt.xlabel('Steps')
-# plt.ylabel('Average reward')
-# plt.legend()
-# plt.savefig('results.png',dpi=300)
-# plt.show()
+plt.plot(np.arange(totalSteps+1),epsilon1MeanReward,linewidth=2, color='r', label='epsilon =0')
+plt.plot(np.arange(totalSteps+1),epsilon2MeanReward,linewidth=2, color='k', label='epsilon =0.1')
+plt.plot(np.arange(totalSteps+1),epsilon3MeanReward,linewidth=2, color='m', label='epsilon =0.2')
+plt.plot(np.arange(totalSteps+1),epsilon4MeanReward,linewidth=2, color='b', label='epsilon =0.3')
+plt.xscale("log")
+plt.xlabel('Steps')
+plt.ylabel('Average reward')
+plt.legend()
+plt.savefig('results.png',dpi=300)
+plt.show()
 
